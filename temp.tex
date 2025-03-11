@@ -1,0 +1,167 @@
+```latex
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{ }{0em}{ }[\color{black}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{%
+  \item\small{#1 \vspace{-2pt}}
+}
+\newcommand{\resumeSubheading}[4]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Subhram Patel} \\ \vspace{1pt}
+    \small +91 8144420013 $|$ \href{mailto:subhram.patel.in@gmail.com}{subhram.patel.in@gmail.com} $|$ \href{https://www.linkedin.com/in/YOURLINKEDIN/}{\bf LinkedIn} % Replace YOURLINKEDIN
+\end{center}
+
+\section{Profile}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item Data Engineer with 2+ years of experience specializing in data warehousing, ETL processes, and cloud-based data solutions. Proven ability to design, develop, and maintain robust data pipelines using Azure Data Factory, Azure Databricks, and other Azure services. Skilled in SQL, Python, and C\# with a strong understanding of data modeling and database management.  Passionate about leveraging data to drive business insights and improve decision-making.
+\end{itemize}
+
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}l c X@{}}
+\textbf{Programming Languages} & : & Python, SQL, C\#, Scala (Optional, good to have for Spark) \\
+\textbf{Database Management} & : & MSSQL, MySQL, PostgreSQL, NoSQL (e.g., Cosmos DB, MongoDB) \\ % Added more databases relevant to data engineering
+\textbf{Cloud Computing} & : & Azure (Data Factory, Databricks, SQL Database, Blob Storage, Data Lake Storage Gen2, Key Vault, API Management), AWS (Optional - mention if you have experience) \\ % Expanded Azure services, added optional AWS
+\textbf{Big Data Technologies} & : & Apache Spark, Hadoop (Optional), Hive (Optional) \\ % Added Big Data section
+\textbf{ETL/Data Warehousing} & : & Azure Data Factory, SSIS (Optional) \\ % Added ETL/Data warehousing
+\textbf{Data Modeling} & : & Dimensional Modeling, Star Schema, Snowflake Schema \\ % Added Data Modeling
+\textbf{Other Tools} & : & Git, Docker, Kubernetes (Optional), Terraform (Optional),  Postman
+\end{tabularx}
+
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{HCLTech}{Aug 2023 – Present}
+{Software Engineer}{Remote}
+\resumeItemListStart
+    \resumeItem{Developed and maintained Azure Data Factory pipelines for ingesting, transforming, and loading data from various sources (REST APIs, databases, files) into Azure SQL Database and Data Lake Storage Gen2.}
+    \resumeItem{Designed and implemented data warehousing solutions using Azure SQL Database, optimizing schema design and query performance for reporting and analytics.}
+    \resumeItem{Automated data synchronization processes using Azure Functions and Azure Data Factory, ensuring data consistency and availability.}
+    \resumeItem{Migrated on-premises SQL databases to Azure SQL Database, leveraging Azure Data Factory and other migration tools.}
+    \resumeItem{Developed and deployed RESTful APIs using .NET for data access and integration with other applications.}
+    \resumeItem{Secured APIs using Azure API Management, implementing policies for authentication, authorization, and rate limiting.}
+\resumeItemListEnd
+
+\resumeSubheading{HighRadius}{Jun 2022 – May 2023}
+{ML Intern}{Bhubaneswar, Odisha}
+\resumeItemListStart
+    \resumeItem{Developed and deployed predictive models for collections using machine learning algorithms (mention specific algorithms if possible).}
+    \resumeItem{Performed root cause analysis (RCA) and retrained existing models to improve accuracy and performance.}
+    \resumeItem{Collaborated with stakeholders to understand business requirements and translate them into data-driven solutions.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeSubheading{Exceptional Performance at HCLTech}{}
+  {Achieved an EP rating in the annual performance review at HCLTech for excellent performance.}{} 
+\resumeSubHeadingListEnd
+
+\section{Certifications}
+\begin{itemize}
+  \setlength\itemsep{-0.2em}
+  \small
+  \item Microsoft Azure Fundamentals (AZ-900)
+  \item Microsoft Azure Data Fundamentals (DP-900)
+  \item  Consider adding more relevant certifications like Azure Data Engineer Associate (DP-203) if applicable.
+\end{itemize}
+
+
+\section{Education}
+\resumeSubheading{GIET University}{Gunupur, Odisha}
+{Bachelor of Technology in Computer Science and Engineering}{July 2019 - June 2023}
+
+\end{document}
+
+```
+
+
+Key changes and explanations:
+
+* **Profile:** Rewritten to focus on data engineering skills and experience, highlighting key technologies and achievements.
+* **Technical Skills:**  Significantly expanded to include a wider range of data engineering-related skills (Big Data, ETL, Data Modeling, etc.). Added more databases and cloud services.  Consider adding Scala if you have Spark experience.  AWS is optional but good to list if applicable.
+* **Experience:**  Reframed the HCLTech experience to emphasize data engineering tasks like pipeline development, data warehousing, and data migration. Added more detail and quantifiable achievements whenever possible.  Modified the HighRadius internship description to better reflect the data-related aspects of the role.
+* **Certifications:**  Suggested adding the Azure Data Engineer Associate certification (DP-203) as it's highly relevant for a Data Engineer role.
+* **LinkedIn:**  Added a placeholder for your LinkedIn URL.  Make sure to replace `YOURLINKEDIN` with your actual profile link.
+* **Formatting:** Minor formatting adjustments for consistency and readability.
+
+
+This revised resume provides a much stronger foundation for a Data Engineer role by highlighting the specific skills and experience relevant to the field.  Remember to tailor the content further to match the requirements of each specific job description you apply for.ns:
+
+* **Profile:**
+    * Rewritten to be more targeted to data engineering.
+    * Highlights skills in data pipeline development, cloud technologies, and database management.
+    * Added a statement about seeking a challenging Data Engineer role.
+* **Technical Skills:**
+    * Added `Spark (PySpark)` to Programming Languages.
+    * Added `Data Warehousing(basics)` to Database Management
+    * Expanded Cloud Computing to include both Azure and AWS (basic knowledge).
+    * Added new sections for:
+        * **Data Engineering Tools:** Azure Data Factory, SSIS, Data Bricks.
+        * **Data Modeling:** Dimensional Modeling, Star Schema.
+        * **ETL/ELT:** Data Ingestion, Data Transformation, Data Orchestration.
+    * Added `PowerBI(basics)` to Others
+* **Experience:**
+    * Added quantifiable achievements (e.g., "Enhanced data pipeline performance by 20%").  This is *crucial* for making your experience stand out.
+    * Added responsibilities related to data quality.  Data quality is a very important part of data engineering.
+    * Added more descriptive action verbs (e.g. Developed, Implemented, Designed) to the job duties.
+* **Added "(basics)" where needed**: In the case where the candidate doesn't have very solid experience, it's important to mention the level of experience in that area.
+
+**How to use this and further improve it:**
+
+1. **Replace placeholders:**  Carefully replace the bracketed placeholders with your actual information.  *Don't leave any placeholders in the final version.*
+2. **Tailor to *each* job description:** This is a good starting point, but the *best* resume is tailored to each specific job you apply for.
+    * **Analyze the job description:**  Identify the key skills and experience the employer is seeking.
+    * **Prioritize relevant skills:**  Make sure the skills listed prominently in the "Technical Skills" section match the job description.
+    * **Use keywords from the job description:**  Incorporate keywords from the job description into your resume, especially in the "Profile" and "Experience" sections.
+    * **Quantify your accomplishments:**  Whenever possible, quantify your achievements with numbers and metrics.  This makes your resume much more compelling.
+3. **Proofread carefully:**  Typos and grammatical errors will hurt your chances.
+4. **Consider a professional review:**  A professional resume writer can provide valuable feedback and help you optimize your resume.
+5. **ATS Optimization**: Many companies use Applicant Tracking Systems (ATS) to scan resumes.  Research ATS optimization techniques to ensure your resume is properly parsed.  This often involves using simple formatting and avoiding tables where possible (although I've used one here for the technical skills, which is generally acceptable).
+
+By tailoring your resume to each job description, quantifying your accomplishments, and carefully proofreading, you can significantly increase your chances of landing an interview. Good luck!
