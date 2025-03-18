@@ -13,8 +13,12 @@ import fitz
 
 import google.generativeai as genai
 
-os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# Everything is accessible via the st.secrets dict:
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+
+# os.getenv("GOOGLE_API_KEY")
+# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 def get_gemini_response(input, pdf_content, prompt):
     model = genai.GenerativeModel('gemini-2.0-flash')
