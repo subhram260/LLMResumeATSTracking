@@ -76,19 +76,64 @@ pdf_content = ""
 if uploaded_file is not None:
     st.write("PDF Uploaded Successfully")
 
-submit1 = st.button("Tell Me About the Resume")
+# submit1 = st.button("Tell Me About the Resume")
 
-submit2 = st.button("How Can I Improvise my Skills")
+# submit2 = st.button("How Can I Improvise my Skills")
 
-submit3 = st.button("What are the Keywords That are Missing")
+# submit3 = st.button("What are the Keywords That are Missing")
 
-submit4 = st.button("Percentage match")
+# submit4 = st.button("Percentage match")
 
-submit5 = st.button("Skill Alignment Table Generator")
+# submit5 = st.button("Skill Alignment Table Generator")
 
-submit6 = st.button("LatexResume Generator")
+# submit6 = st.button("LatexResume Generator")
 
-submit7 = st.button("Interview Q/A Generator")
+# submit7 = st.button("Interview Q/A Generator")
+
+# submit8 = st.button("Revised Experience Suggestion")
+
+# First row of buttons
+
+button_style = """
+<style>
+    div[class*="stButton"] > button {
+        height: auto; /* Adjusts height automatically */
+        width: 100%; /* Makes buttons stretch evenly */
+        word-wrap: break-word; /* Ensures long text wraps to the next line */
+        text-align: center; /* Centers the text */
+        font-size: 14px; /* Set a font size that fits well */
+        min-height: 90px; /* Sets a minimum height for uniform-sized boxes */
+        max-height: 90px; /* Optional: Prevents oversized buttons */
+        padding: 15px; /* Add padding inside the button */
+        border: 1px solid white;
+    }
+</style>
+"""
+st.markdown(button_style, unsafe_allow_html=True)
+
+# First row of buttons
+col1, col2, col3, col4 = st.columns(4)
+with col1:
+    submit1 = st.button("Tell Me About the Resume")
+with col2:
+    submit2 = st.button("How Can I Improvise my Skills")
+with col3:
+    submit3 = st.button("What are the Keywords That are Missing")
+with col4:
+    submit4 = st.button("Percentage Match")
+
+# Second row of buttons
+col5, col6, col7, col8 = st.columns(4)
+with col5:
+    submit5 = st.button("Skill Alignment Table Generator")
+with col6:
+    submit6 = st.button("LatexResume Generator")
+with col7:
+    submit7 = st.button("Interview Q/A Generator")
+with col8:
+    submit8 = st.button("Revised Experience Suggestion")
+
+
 
 
 input_promp = st.text_input("Queries: Feel Free to Ask here")
@@ -176,6 +221,38 @@ You are a highly sophisticated interview strategy consultant, specializing in pr
 
  The resume and job description provided
 """
+
+input_prompt8 = """
+You are an expert resume editor and career strategist with a deep understanding of Applicant Tracking Systems (ATS) and recruitment best practices. Your task is to perform a granular analysis of ONLY the "Experience" section of the provided resume, comparing it to the given job description to identify gaps, suggest improvements, and provide context-rich sample lines.
+
+The resume and job description provided
+
+Output Format:
+Provide separate tables for each gap category identified. Each table should have the following columns:
+1. Why This Is Important: This column should provide a compelling explanation of why the skill or experience mentioned in the gap category is important for this specific job, referencing the job description. Quote or paraphrase the relevant requirement from the job description and explain its significance in the context of the role.
+2. Resume Evidence (Experience Section): This column should describe in detail what evidence, if any, exists within the provided resume's "Experience" section that relates to the gap category. If there is no direct evidence, state "Not explicitly mentioned" or a similar phrase, but also identify any implied skills or experiences that could be leveraged.
+* Note(Strictly): The simple lines should be in a new table after the above 2 columns table.
+1. Sample Lines: This column should present context-rich, impactful sample lines addressing the gap. Each sample line should appear in a separate row to ensure clarity. The sample lines should be highly specific, tailored to the resume's existing content and the job description's requirements, using industry-specific keywords, strong action verbs, and quantifiable achievements where possible.
+*Detailed Instructions:*
+
+1.  *In-Depth Analysis of Job Description and Resume's Experience Section:* Conduct a thorough and detailed analysis of both the provided job description and ONLY the "Experience" section of the resume. Go beyond surface-level comparisons and focus on identifying nuanced gaps in skills, experience, and how information is presented within the resume's "Experience" section. Consider the context of the job requirements, the candidate's existing experience, and how the "Experience" section can be strategically modified to increase its impact.
+2.  *Precise Identification of Gaps in Experience Section:* Focus on identifying key skills and experience requirements from the job description that are missing or not clearly and effectively articulated within the resume's "Experience" section. Prioritize the gaps that are most critical for the job and that can be addressed by rephrasing or adding details to existing experience.
+3.  *Structured Output in Separate Tables:* Structure your output as separate tables for each gap category. Use the "Output Format" table structure for each gap category, ensuring each table is self-contained and clearly organized.
+4.  *Content of Each Column:*
+    * *Why This Is Important:* Provide a detailed and persuasive explanation of why the skill or experience mentioned in the gap category is significant for this specific role. Quote or paraphrase the relevant requirement from the job description and elaborate on its importance, demonstrating an understanding of the employer's needs.
+    * *Resume Evidence (Experience Section):* Provide a comprehensive description of what evidence, if any, exists within the provided resume's "Experience" section that relates to the gap category. If there is no direct evidence, state "Not explicitly mentioned" or a similar phrase. However, also analyze the existing content for any implied skills or experiences that could be rephrased or expanded upon to address the gap.
+    * *Sample Lines:* Provide 5-6 highly specific, context-rich, and impactful sample lines that could be added to the resume's "Experience" section to address the gap. These lines should be tailored to the candidate's existing experience and the job description's requirements. Use industry-specific keywords, strong action verbs, and quantifiable achievements where possible. The sample lines should demonstrate a clear understanding of how the candidate's experience can be strategically framed to match the job requirements and showcase their qualifications effectively.
+
+Key Improvements and Advanced Elements:
+ * Emphasis on Granular Analysis: The prompt stresses a "granular analysis" and going "beyond surface-level comparisons."
+ * Focus on Context-Rich Output: The prompt emphasizes providing "context-rich sample lines" and a "detailed and persuasive explanation" of the importance of each gap.
+ * ATS and Recruitment Best Practices: The prompt adds the perspective of an expert with "a deep understanding of Applicant Tracking Systems (ATS) and recruitment best practices."
+ * Leveraging Implied Skills: The prompt encourages identifying and leveraging "implied skills or experiences" in the resume.
+ * Strategic Framing: The prompt focuses on "strategically framed" experience to match job requirements.
+ * Quantifiable Achievements: The prompt highlights the importance of using "quantifiable achievements where possible."
+ * Clarity on Importance of Sample Lines: The prompt sets a high bar for the sample lines, emphasizing that they should be "highly specific, context-rich, and impactful."
+"""
+
 
 input_prompt6 = r"""
 make this resume good fit according to jd by adding required skills and experience for the role in same latex code format with below format :
@@ -346,6 +423,18 @@ elif submit7:
     else:
         st.write("Please upload a PDF file to proceed.")
         # Generate files when the button is clicked
+
+
+elif submit8:
+    if uploaded_file is not None:
+        pdf_content = input_pdf_setup(uploaded_file)
+        response = get_gemini_response(input_prompt8, pdf_content, input_text)
+        st.subheader("The Response is")
+        st.write(response)
+    else:
+        st.write("Please upload a PDF file to proceed.")
+
+
 # if st.button("Generate Word & PDF"):
 #     if uploaded_file is not None:
 #         pdf_content = input_pdf_setup(uploaded_file)
